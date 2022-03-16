@@ -113,12 +113,10 @@ function App() {
             </div>
             <button className="btn btn-primary" disabled={requiredChecker() || descLimiter()} type="submit">Salvar</button>
             <button className="btn btn-secondary" onClick={handleClearCard}>Apagar cartas salvas</button>
-            <div className="row">
-              <div className="col-md-6 mb-3">
-                <CardList cards={cards}  />
-              </div>
-            </div>
           </form>    
+          <div className="row">
+                <CardList cards={cards}  />
+            </div>
         </div>
       </div>
     </div>

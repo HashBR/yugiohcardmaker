@@ -8,3 +8,63 @@ body {
   justify-content: center; /* alinha horizontal */ 
   background-color: #Fff;
 }
+
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; 
+  background-image: url(./imgs/cardtemplate.png);
+  background-size: cover;
+  height: 307px;
+  width: 210px;
+}
+
+.card-wrapper .card-title {
+  align-self: flex-start;
+  margin-left: 15px;
+  margin-top: 10px;  
+  margin-bottom: 0px;
+}
+
+.card-wrapper .card-stars{
+  align-self: flex-end;
+  margin-right: 19px;
+  margin-top: -5px;
+}
+
+.card-wrapper .card-stars img{
+  height: 13px;
+  width: 13px;
+  margin: 1px;
+}
+
+.card-wrapper .card-img {
+  height: 164px;
+  width: 164px;
+}
+
+.card-wrapper .card-desc {
+  font-size: x-small;
+  align-self: center;
+  margin-top: 13px;
+  /* margin-left: 15px; */
+  width: 180px;
+  height: 50px;
+}
+
+.card-wrapper .card-atk-def {
+  font-size: 6pt;
+  align-self: flex-end;
+  margin-top: -1px;
+}
+
+.card-wrapper .card-atk-def .card-atk{
+  align-self: flex-start;
+  margin-right: 25px;
+}
+
+.card-wrapper .card-atk-def .card-def{
+  align-self: flex-end;
+  margin-right: 16px;
+}
