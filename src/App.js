@@ -58,9 +58,6 @@ function App() {
     if (!def){
       missinginputs.push("Defesa")
     }
-    else {
-      missinginputs = ""
-    }
     return missinginputs
   }
 
@@ -72,9 +69,8 @@ function App() {
   }
 
   function handleClearCard(e) {
-    const newCards = cards.filter(card => !card);
     e.preventDefault();
-    setCards(newCards)
+    setCards([]);
     console.log("clear")
     //alert("Limpado.")
   }
@@ -111,7 +107,7 @@ function App() {
                 <input type="text" className="form-control" id="def-input" placeholder="1250" onChange={(e) => setDef(e.target.value.replace(/[^0-9]/g, ""))} value={def} />
               </div>
             </div>
-            <button className="btn btn-primary" disabled={requiredChecker() || descLimiter()} type="submit">Salvar</button>
+            <button className="btn btn-primary" disabled={requiredChecker().length > 0 || descLimiter()} type="submit">Salvar</button>
             <button className="btn btn-secondary" onClick={handleClearCard}>Apagar cartas salvas</button>
           </form>    
           <div className="row">
